@@ -11,9 +11,11 @@ What changed ? What are the so called Incremental Improvements?
 Bounding Box Predictions : YOLOv3 just like YOLOv2 uses dimension clusters to generate Anchor Boxes. Now as YOLOv3 is a single network the loss for objectiveness and classification needs to be calculated separately but from the same network. YOLOv3 predicts the objectiveness score using logistic regression where 1 means complete overlap of bounding box prior over the ground truth object. It will predict only 1 bonding box prior for one ground truth object( unlike Faster RCNN) and any error in this would incur for both classification as well as detection (objectiveness) loss. There would also be other bounding box priors which would have objectiveness score more than the threshold but less than the best one, for these error will only incur for the detection loss and not for the classification loss.
 Class Predictions : YOLOv3 uses independent logistic classifiers for each class instead of a regular softmax layer. This is done to make the classification multi-label classification. What it means and how it adds value? Take an example, where a woman is shown in the picture and the model is trained on both person and woman, having a softmax here will lead to the class probabilities been divided between these 2 classes with say 0.4 and 0.45 probabilities. But independent classifiers solves this issue and gives a yes vs no probability for each class, like what’s the probability that there is a woman in the picture would give 0.8 and what’s the probability that there is a person in the picture would give 0.9 and we can label the object as both person and woman.
 
-source: https://github.com/arunponnusamy/object-detection-opencv
-        
-        https://www.arunponnusamy.com/yolo-object-detection-opencv-python.html
+# source: 
+
+- https://github.com/arunponnusamy/object-detection-opencv
+
+- https://www.arunponnusamy.com/yolo-object-detection-opencv-python.html
         
 # (for Videos )we will nead the below library to read from youtube link
 
