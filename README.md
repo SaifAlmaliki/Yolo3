@@ -17,7 +17,7 @@ Class Predictions : YOLOv3 uses independent logistic classifiers for each class 
 
 - https://www.arunponnusamy.com/yolo-object-detection-opencv-python.html
         
-# (for Videos )we will nead the below library to read from youtube link
+# (for Videos) we will need the below library to read from youtube link
 
 - pip install --upgrade youtube-dl
 
